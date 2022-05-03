@@ -1,15 +1,15 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Welcome to Your Vue.js App" />
+  <h1>Car Loan Repayment Form</h1>
+  <LoanRepaymentForm></LoanRepaymentForm>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
+import LoanRepaymentForm from "./components/LoanRepaymentForm.vue";
 
 export default {
   name: "App",
   components: {
-    HelloWorld,
+    LoanRepaymentForm,
   },
 };
 </script>
