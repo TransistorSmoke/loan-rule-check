@@ -1,15 +1,18 @@
 <template>
   <h1>Car Loan Repayment Form</h1>
   <LoanRepaymentForm></LoanRepaymentForm>
+  <LoanCalculationsTable></LoanCalculationsTable>
 </template>
 
 <script>
 import LoanRepaymentForm from "./components/LoanRepaymentForm.vue";
+import LoanCalculationsTable from "./components/LoanCalculationsTable.vue";
 
 export default {
   name: "App",
   components: {
     LoanRepaymentForm,
+    LoanCalculationsTable,
   },
 };
 </script>
