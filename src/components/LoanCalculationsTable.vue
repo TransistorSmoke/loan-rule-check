@@ -98,12 +98,12 @@ export default {
     background-color: rgb(238, 238, 238);
 
     &-type {
-      color: rgb(214, 49, 49);
+      color: rgb(232, 70, 70);
       text-decoration: underline;
     }
   }
   .amt-repayment {
-    background-color: rgb(255, 212, 212);
+    color: rgb(232, 70, 70);
     font-size: 1rem;
   }
 }
