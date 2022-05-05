@@ -48,23 +48,12 @@ export default {
   },
   mounted() {
     this.emitter.on("emit-repayment", (repaymentData) => {
-      console.log(repaymentData);
       this.monthlyRepaymentData = repaymentData;
     });
   },
 };
 </script>
 <style lang="scss" scoped>
-// .container {
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: center;
-//   align-items: center;
-
-//   border: 2px solid black;
-//   height: 100%
-// }
-
 .tbl-container {
   font-size: 0.85rem;
   font-weight: bold;
