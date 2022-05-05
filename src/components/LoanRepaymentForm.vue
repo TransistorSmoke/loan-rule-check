@@ -140,8 +140,6 @@ export default {
 <style lang="scss" scoped>
 .loan-form {
   border: 1px solid rgb(224, 224, 224);
-  border-radius: 12px;
-  // max-width: 25%;
   padding: 16px 0;
   margin: 0 auto;
   display: flex;

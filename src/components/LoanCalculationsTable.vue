@@ -1,5 +1,5 @@
 <template>
-  <h1>Loan Repayment Result</h1>
+  <h1>Loan Repayment Summary</h1>
   <div class="tbl-container">
     <table>
       <thead>
@@ -55,11 +55,21 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
+// .container {
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+//   align-items: center;
+
+//   border: 2px solid black;
+//   height: 100%
+// }
+
 .tbl-container {
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   font-weight: bold;
   max-width: 90%;
-  margin: 0 auto;
+  margin: 64px auto 0 auto;
 
   table {
     border-collapse: collapse;
@@ -71,7 +81,7 @@ export default {
   td {
     border: 1px solid #ccc;
     width: 50%;
-    padding: 4px 8px 4px 0;
+    padding: 4px 8px;
   }
 
   tr td:first-child {
@@ -80,7 +90,7 @@ export default {
 
   td:first-child,
   td:nth-child(2) {
-    width: 35%;
+    width: 30%;
   }
 
   .rule {

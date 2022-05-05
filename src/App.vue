@@ -1,6 +1,8 @@
 <template>
   <div class="container">
-    <div class="main-rules-definition">Rules here</div>
+    <div class="main-rules">
+      <Rules></Rules>
+    </div>
     <div div="main-form">
       <h1>Car Loan Repayment Form</h1>
       <LoanRepaymentForm></LoanRepaymentForm>
@@ -15,10 +17,12 @@
 <script>
 import LoanRepaymentForm from "./components/LoanRepaymentForm.vue";
 import LoanCalculationsTable from "./components/LoanCalculationsTable.vue";
+import Rules from "./components/Rules.vue";
 
 export default {
   name: "App",
   components: {
+    Rules,
     LoanRepaymentForm,
     LoanCalculationsTable,
   },
@@ -36,13 +40,17 @@ export default {
 }
 
 .container {
-  border: 1px solid red;
   display: flex;
   justify-content: space-between;
 
   & > * {
     width: 100%;
-    border: 2px solid red;
+    border: 1px solid rgb(235, 235, 235);
+    padding: 16px;
+  }
+
+  & > :nth-child(2) {
+    margin: 0 8px;
   }
 }
 </style>
