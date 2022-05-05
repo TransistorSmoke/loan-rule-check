@@ -40,7 +40,7 @@
         </p>
       </div>
 
-      <button class="submit" type="submit">SUBMIT</button>
+      <button class="btn-submit" type="submit">SUBMIT</button>
     </form>
   </div>
 </template>
@@ -56,7 +56,7 @@ export default {
       loanAmount: null,
       loanTermYears: null,
       PMT: null,
-      monthlyRepayments: null,
+      monthlyRepayment: null,
       loanFormErrors: {
         isInvalidLoanAmount: false,
         isInvalidLoanTermYears: false,
@@ -112,7 +112,12 @@ export default {
         event.target.reset();
         event.target.blur();
 
-        this.emitter.emit("emit-repayment", this.monthlyRepayment.toFixed(2));
+        this.emitter.emit("emit-repayment", {
+          amount: this.loanAmount,
+          paymentPeriod: this.loanTermYears,
+          amountRepayment: this.monthlyRepayment,
+          rule: this.rule,
+        });
       }
 
       // Set field error flags
@@ -136,7 +141,7 @@ export default {
 .loan-form {
   border: 1px solid rgb(224, 224, 224);
   border-radius: 12px;
-  max-width: 25%;
+  // max-width: 25%;
   padding: 16px 0;
   margin: 0 auto;
   display: flex;
@@ -177,13 +182,15 @@ export default {
       font-weight: bold;
     }
 
-    .submit {
+    .btn-submit {
       padding: 12px;
       background-color: rgb(211, 255, 211);
+      color: #2c3e50;
       transition: background-color 0.2s;
       width: 100%;
       border: none;
       margin-top: 24px;
+      border-radius: 5px;
 
       &:hover {
         background-color: rgb(141, 237, 141);
