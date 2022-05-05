@@ -132,6 +132,14 @@ export default {
       } else {
         this.loanFormErrors.isInvalidLoanTermYears = false;
       }
+
+      this.clearAlldata();
+    },
+    clearAlldata() {
+      this.loanAmount = null;
+      this.loanTermYears = null;
+      this.PMT = null;
+      this.monthlyRepayment = null;
     },
   },
 };
