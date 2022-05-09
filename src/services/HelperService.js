@@ -35,15 +35,24 @@ export default {
     let monthlyRepayment = null;
 
     if (ruleType && ruleType === "A" && PMT) {
+      const miscA = 1 + lenderRuleA.brokerFeePerAnnum / (paymentPeriods * 12);
+      console.log("miscA: ", miscA);
+      console.log("PMT A: ", PMT);
       monthlyRepayment =
         (PMT - lenderRuleA.monthlyFee) *
         // eslint-disable-next-line prettier/prettier
         (1 + (lenderRuleA.brokerFeePerAnnum / (paymentPeriods * 12)));
     } else if (ruleType && ruleType === "B" && PMT) {
+      const misc =
+        1 +
+        lenderRuleB.brokerFeePerAnnum / (paymentPeriods * 12) -
+        lenderRuleB.monthlyFee;
+      console.log("PMT B: ", PMT);
+      console.log("misc B: ", misc);
+
       monthlyRepayment =
-        PMT +
-        // eslint-disable-next-line prettier/prettier
-        ((1 + (lenderRuleB.brokerFeePerAnnum / (paymentPeriods * 12))) - lenderRuleB.monthlyFee);
+        PMT * (1 + lenderRuleB.brokerFeePerAnnum / (paymentPeriods * 12)) -
+        lenderRuleB.monthlyFee;
     }
 
     return monthlyRepayment;
