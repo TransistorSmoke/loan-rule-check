@@ -1,5 +1,6 @@
-# cc-tech-challenge
-This codebase is my answer to Car Clarity's technical challenge.
+# loan-rule-check
+
+A smal VueJS app to calculate monthly repayment based on rules.
 
 1.) HOW TO SETUP AND RUN
 ------------------------
@@ -35,31 +36,6 @@ The equation to calculate the repayment value varies according to the rule used.
     - The function (getMonthlyRepayment) calculates the final REPAYMENT value.
 
     --- To test, enter some details on the form and check the resulting repayment value in the table. ---
-
-
-4.) LENGTH OF TIME SPENT CREATING THE APPLICATION
--------------------------------------------------
-    - Time spent creating the application, including this required documentation and the walkthrough, is approximately 8 hours.
-
-
-5.) PART OF THE APPLICATION YOU ARE MOST PROUD OF
--------------------------------------------------
-    - This app itself created with Vue. This is my second time creating an app using Vue. It's working. Thankfully.
-    - The usage of the emitter to transfer data between sibling components, without passing it to the parent.
-    - I am able to reuse code from my first app to this app!
-
-
-6.) IMPROVEMENTS NEEDED
------------------------
-    - Proper validation is needed, especially those in calculations.
-        - To some extent, validation that I applied to the prevents acceptance of null/undefined parameters. But this validation can be improved.
-
-    - Unit testing need to be applied. I was not able to write the test.
-    - UI and UX need improvement.
-    - BUsiness decision on rounding off of figures. Rounding of off numbers causes bits of discrepancies in the resulting calculated value (results may vary by a few decimals to about 1 or 2).
-
-
-
 
 ## Project setup
 ```
