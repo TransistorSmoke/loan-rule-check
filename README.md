@@ -2,6 +2,9 @@
 
 A smal VueJS app to calculate monthly repayment based on rules.
 
+https://loan-rule-check.netlify.app/
+
+
 1.) HOW TO SETUP AND RUN
 ------------------------
   - npm install       --> to install dependencies
